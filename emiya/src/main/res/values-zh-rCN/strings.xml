@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">emiya</string>
+    <string name="number_limit_et_hint">还可以输入</string>
+    <string name="number_limit_et_hint2">字</string>
+</resources>
