@@ -85,16 +85,4 @@ public class ApkUtils {
         }
         return false;
     }
-
-    /**
-     * @param context
-     * @param absPath
-     */
-    public static int getApkVersionCode(Context context, String absPath) {
-        PackageManager pm = context.getPackageManager();
-        PackageInfo pkgInfo = pm.getPackageArchiveInfo(absPath, PackageManager.GET_ACTIVITIES);
-        if (pkgInfo != null)
-            return pkgInfo.versionCode;
-        return -1;
-    }
 }
