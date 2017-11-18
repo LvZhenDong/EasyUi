@@ -4,10 +4,10 @@ import android.content.Context;
 import android.util.TypedValue;
 
 /**
- *单位转换工具类
- * 
+ * 单位转换工具类
+ *
  * @author LvZhenDong
- * created at 2016/12/15 10:35
+ *         created at 2016/12/15 10:35
  */
 public class DensityUtils {
     private DensityUtils() {

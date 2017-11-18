@@ -25,8 +25,8 @@ public abstract class BaseListAdapter<T, R extends RecyclerView.ViewHolder> exte
 
     @Override
     public R onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater inflater=LayoutInflater.from(mContext);
-        return onLCreateViewHolder(inflater,parent, viewType);
+        LayoutInflater inflater = LayoutInflater.from(mContext);
+        return onLCreateViewHolder(inflater, parent, viewType);
     }
 
     @Override
@@ -45,7 +45,7 @@ public abstract class BaseListAdapter<T, R extends RecyclerView.ViewHolder> exte
 
     }
 
-    public abstract R onLCreateViewHolder(LayoutInflater inflater,ViewGroup parent, int viewType);
+    public abstract R onLCreateViewHolder(LayoutInflater inflater, ViewGroup parent, int viewType);
 
     public abstract void onBindItemHolder(R holder, int position);
 
@@ -62,8 +62,8 @@ public abstract class BaseListAdapter<T, R extends RecyclerView.ViewHolder> exte
         return mDataList;
     }
 
-    public T getLastItem(){
-        return mDataList.get(mDataList.size()-1);
+    public T getLastItem() {
+        return mDataList.get(mDataList.size() - 1);
     }
 
     public void setDataList(List<T> list) {
@@ -85,8 +85,8 @@ public abstract class BaseListAdapter<T, R extends RecyclerView.ViewHolder> exte
         }
     }
 
-    public void addAll(int index, Collection<T> list){
-        if(this.mDataList.addAll(index,list)){
+    public void addAll(int index, Collection<T> list) {
+        if (this.mDataList.addAll(index, list)) {
             notifyItemRangeInserted(index, list.size());
         }
     }

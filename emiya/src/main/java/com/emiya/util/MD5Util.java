@@ -27,7 +27,7 @@ public final class MD5Util {
     }
 
     public static String encodeByLower(String target) {
-        return TextUtils.isEmpty(target)?null:getMD5String(target, false);
+        return TextUtils.isEmpty(target) ? null : getMD5String(target, false);
     }
 
     private static String getMD5String(String s, boolean isUpperCase) {

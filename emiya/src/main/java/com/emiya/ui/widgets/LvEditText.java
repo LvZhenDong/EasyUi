@@ -37,7 +37,7 @@ public class LvEditText extends android.support.v7.widget.AppCompatEditText {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 
-                if (actionId == EditorInfo.IME_ACTION_NEXT ||actionId == EditorInfo.IME_ACTION_SEND || actionId == EditorInfo.IME_ACTION_DONE
+                if (actionId == EditorInfo.IME_ACTION_NEXT || actionId == EditorInfo.IME_ACTION_SEND || actionId == EditorInfo.IME_ACTION_DONE
                         || (event != null && KeyEvent.KEYCODE_ENTER == event.getKeyCode()
                         && KeyEvent.ACTION_DOWN == event.getAction())) {
                     //处理事件
@@ -45,7 +45,7 @@ public class LvEditText extends android.support.v7.widget.AppCompatEditText {
                     if (mOnEnterListener != null)
                         mOnEnterListener.onEnterClick(text);
 
-                    InputMethodManager imm = (InputMethodManager)getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(getWindowToken(), 0);
                 }
                 return false;

@@ -18,10 +18,11 @@ import com.emiya.R;
 public class MaxHeightWebView extends WebView {
     private int maxHeight;
     private final int defaultHeight = 200;
-    
+
     public MaxHeightWebView(Context context) {
         super(context);
     }
+
     public MaxHeightWebView(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (!isInEditMode()) {

@@ -7,10 +7,10 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 
 /**
- *带下划线的EditText
+ * 带下划线的EditText
  *
  * @author LvZhenDong
- * created at 2017/6/30 9:46
+ *         created at 2017/6/30 9:46
  */
 public class LineEditText extends android.support.v7.widget.AppCompatEditText {
     private Paint paint;
@@ -31,6 +31,6 @@ public class LineEditText extends android.support.v7.widget.AppCompatEditText {
         /**canvas画直线，从左下角到右下角，this.getHeight()-2是获得父edittext的高度，但是必须要-2这样才能保证
          * 画的横线在edittext上面，那样才看得见，如果不-2，你可以试一试看一下是否能看得见。
          */
-        canvas.drawLine(0, this.getHeight()-2, this.getWidth()-2, this.getHeight()-2, paint);
+        canvas.drawLine(0, this.getHeight() - 2, this.getWidth() - 2, this.getHeight() - 2, paint);
     }
 }

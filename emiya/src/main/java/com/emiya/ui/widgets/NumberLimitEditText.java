@@ -102,18 +102,18 @@ public class NumberLimitEditText extends RelativeLayout {
                 ViewGroup.LayoutParams.WRAP_CONTENT);
         params.addRule(ALIGN_PARENT_BOTTOM);
         params.addRule(ALIGN_PARENT_RIGHT);
-        String str=String.format(getContext().getString(R.string.limit_et_hint),(limitNum - limitNum)+"");
+        String str = String.format(getContext().getString(R.string.limit_et_hint), (limitNum - limitNum) + "");
         mTv.setText(str);
         mTv.setLayoutParams(params);
         addView(mTv);
     }
 
     private void showLeftNum(int num) {
-        String str=String.format(getContext().getString(R.string.limit_et_hint),(limitNum - num)+"");
+        String str = String.format(getContext().getString(R.string.limit_et_hint), (limitNum - num) + "");
         mTv.setText(str);
     }
 
-    public Editable getText(){
+    public Editable getText() {
         return mEt.getText();
     }
 }

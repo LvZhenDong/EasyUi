@@ -287,7 +287,7 @@ public class FileUtils {
         return file;
     }
 
-    public static void saveImg(Bitmap bmp,String path){
+    public static void saveImg(Bitmap bmp, String path) {
         FileOutputStream out = null;
         try {
             out = new FileOutputStream(path);

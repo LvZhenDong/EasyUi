@@ -4,5 +4,5 @@
     android:id="@+id/top_bar"
     android:layout_width="match_parent"
     android:layout_height="@dimen/top_bar_height"
-    app:qmui_topbar_bg_color="@color/white"
+    app:qmui_topbar_bg_color="@color/green"
     app:qmui_topbar_left_back_drawable_id="@drawable/ic_emiya_back" />

@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 /**
- *属性动画的包装类
- * 
+ * 属性动画的包装类
+ *
  * @author LvZhenDong
- * created at 2017/6/16 9:35
+ *         created at 2017/6/16 9:35
  */
 public class AnimViewWrapper {
 
@@ -18,13 +18,13 @@ public class AnimViewWrapper {
     /**
      * 需要改变marginLeft的View
      */
-    public static class MarginLeft{
+    public static class MarginLeft {
         private View mTarget;
         private Context mContext;
 
-        public MarginLeft(View target,Context context) {
+        public MarginLeft(View target, Context context) {
             mTarget = target;
-            mContext=context;
+            mContext = context;
         }
 
         public int getMarginLeft() {

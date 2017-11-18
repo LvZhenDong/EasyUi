@@ -37,7 +37,7 @@ public class ProgressView extends android.support.v7.widget.AppCompatImageView {
         int frameCount = a.getInt(R.styleable.ProgressView_frameCount, 12);
         int duration = a.getInt(R.styleable.ProgressView_duration, 1000);
         String src = attrs.getAttributeValue("http://schemas.android.com/apk/res/android", "src");
-        if(TextUtils.isEmpty(src)){
+        if (TextUtils.isEmpty(src)) {
             setImageResource(R.drawable.ic_ring);
         }
         a.recycle();

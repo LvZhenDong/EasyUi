@@ -34,8 +34,7 @@ public class NetworkUtils {
     /**
      * 判断是否是wifi连接
      */
-    public static boolean isWifi(Context context)
-    {
+    public static boolean isWifi(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -47,8 +46,7 @@ public class NetworkUtils {
     /**
      * 打开网络设置界面
      */
-    public static void openSetting(Activity activity)
-    {
+    public static void openSetting(Activity activity) {
         Intent intent = new Intent("/");
         ComponentName cm = new ComponentName("com.android.settings",
                 "com.android.settings.WirelessSettings");

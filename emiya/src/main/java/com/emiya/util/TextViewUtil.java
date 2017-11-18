@@ -12,21 +12,21 @@ import android.widget.TextView;
 
 public class TextViewUtil {
 
-    public static void setText(TextView tv,String text){
-        if(TextUtils.isEmpty(text)){
+    public static void setText(TextView tv, String text) {
+        if (TextUtils.isEmpty(text)) {
             tv.setVisibility(View.GONE);
-        }else {
+        } else {
             tv.setVisibility(View.VISIBLE);
             tv.setText(text);
         }
     }
 
-    public static void setText(TextView tv,String head,String text){
-        if(TextUtils.isEmpty(text)){
+    public static void setText(TextView tv, String head, String text) {
+        if (TextUtils.isEmpty(text)) {
             tv.setVisibility(View.GONE);
-        }else {
+        } else {
             tv.setVisibility(View.VISIBLE);
-            tv.setText(head+text);
+            tv.setText(head + text);
         }
     }
 }
