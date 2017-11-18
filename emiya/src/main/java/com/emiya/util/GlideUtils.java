@@ -39,7 +39,7 @@ public class GlideUtils {
         Glide.with(view.getContext().getApplicationContext())
                 .load(url)
                 .apply(circleRequestOptions
-                        .placeholder(R.drawable.ic_head)
+                        .placeholder(R.drawable.ic_emiya_default_head)
                         .diskCacheStrategy(DiskCacheStrategy.ALL))
                 .into(view);
     }
