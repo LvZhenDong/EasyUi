@@ -14,7 +14,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    public void TODO(Bundle savedInstanceState) {
+    public void toDo(Bundle savedInstanceState) {
         initTopBar();
     }
 

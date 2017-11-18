@@ -38,7 +38,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         setContentView(returnLayoutID());
         unbinder = ButterKnife.bind(this);
         beforeToDo();
-        TODO(savedInstanceState);
+        toDo(savedInstanceState);
     }
 
     public abstract int returnLayoutID();
@@ -47,7 +47,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     }
 
-    public abstract void TODO(Bundle savedInstanceState);
+    public abstract void toDo(Bundle savedInstanceState);
 
     /**
      * get context
