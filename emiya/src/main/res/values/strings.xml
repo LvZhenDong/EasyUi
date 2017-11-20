@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">emiya</string>
     <string name="limit_et_hint">还可以输入%s字</string>
+    <string name="waiting">请稍后...</string>
 </resources>
