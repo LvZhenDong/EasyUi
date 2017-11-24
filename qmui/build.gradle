@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+group = 'com.qmuiteam'
+version = "1.0.4" // QMUI 发布到 bintray 的版本号
+
+//noinspection GroovyMissingReturnStatement
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.2"
+    lintOptions {
+        abortOnError false
+    }
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 25
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile("com.android.support:recyclerview-v7:25.4.0")
+    compile("com.android.support:appcompat-v7:25.4.0")
+    compile("com.android.support:design:25.4.0")
+    compile("com.android.support:support-vector-drawable:25.4.0") // need Gradle Plugin v1.5.0 or above
+
+}
+
+// deploy
+File deployConfig = project.file('deploy.properties')
+if (deployConfig.exists()) {
+    apply from: "deployMaven.gradle"
+    apply from: "deployBintray.gradle"
+}
