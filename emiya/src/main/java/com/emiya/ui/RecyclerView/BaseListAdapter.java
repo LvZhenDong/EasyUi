@@ -1,4 +1,4 @@
-package com.emiya.ui.widgets.adapter;
+package com.emiya.ui.RecyclerView;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
