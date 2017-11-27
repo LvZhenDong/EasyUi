@@ -1,6 +1,8 @@
 package com.emiya.ui.RecyclerView;
 
 import android.content.Context;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -9,47 +11,42 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/**
- *通用RecyclerViewAdapoter
- * 
- * @author LvZhenDong
- *          created on 2017/11/27 11:14
- */
-public abstract class CommonAdapter<T> extends RecyclerView.Adapter<ViewHolder>
-{
+public abstract class CommonAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
     protected Context mContext;
     protected int mLayoutId;
-    protected List<T> mDatas=new ArrayList<>();
+    protected List<T> mDatas = new ArrayList<>();
     protected LayoutInflater mInflater;
 
 
-    public CommonAdapter(Context context, int layoutId)
-    {
+    public CommonAdapter(@NonNull Context context, @LayoutRes int layoutId) {
         mContext = context;
         mInflater = LayoutInflater.from(context);
         mLayoutId = layoutId;
     }
 
+    public CommonAdapter(@NonNull Context context, @LayoutRes int layoutId, List<T> datas) {
+        this(context, layoutId);
+        mDatas = datas;
+    }
+
     @Override
-    public ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType)
-    {
+    public ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
         ViewHolder viewHolder = ViewHolder.get(mContext, parent, mLayoutId);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position)
-    {
+    public void onBindViewHolder(ViewHolder holder, int position) {
         convert(holder, mDatas.get(position));
     }
 
     public abstract void convert(ViewHolder holder, T t);
 
     @Override
-    public int getItemCount()
-    {
+    public int getItemCount() {
         return mDatas.size();
     }
+
     public List<T> getDataList() {
         return mDatas;
     }
@@ -73,8 +70,8 @@ public abstract class CommonAdapter<T> extends RecyclerView.Adapter<ViewHolder>
         }
     }
 
-    public void addAll(int index, Collection<T> list){
-        if(mDatas.addAll(index,list)){
+    public void addAll(int index, Collection<T> list) {
+        if (mDatas.addAll(index, list)) {
             notifyItemRangeInserted(index, list.size());
         }
     }

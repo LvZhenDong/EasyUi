@@ -9,14 +9,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ViewHolder extends RecyclerView.ViewHolder
-{
+public class ViewHolder extends RecyclerView.ViewHolder {
     private SparseArray<View> mViews;
     private View mConvertView;
     private Context mContext;
 
-    private ViewHolder(Context context, View itemView, ViewGroup parent)
-    {
+    private ViewHolder(Context context, View itemView, ViewGroup parent) {
         super(itemView);
         mContext = context;
         mConvertView = itemView;
@@ -24,8 +22,7 @@ public class ViewHolder extends RecyclerView.ViewHolder
     }
 
 
-    public static ViewHolder get(Context context, ViewGroup parent, int layoutId)
-    {
+    public static ViewHolder get(Context context, ViewGroup parent, int layoutId) {
 
         View itemView = LayoutInflater.from(context).inflate(layoutId, parent,
                 false);
@@ -40,34 +37,29 @@ public class ViewHolder extends RecyclerView.ViewHolder
      * @param viewId
      * @return
      */
-    public <T extends View> T getView(int viewId)
-    {
+    public <T extends View> T getView(int viewId) {
         View view = mViews.get(viewId);
-        if (view == null)
-        {
+        if (view == null) {
             view = mConvertView.findViewById(viewId);
             mViews.put(viewId, view);
         }
         return (T) view;
     }
 
-    public ViewHolder setText(int viewId, String text)
-    {
+    public ViewHolder setText(int viewId, String text) {
         TextView tv = getView(viewId);
         tv.setText(text);
         return this;
     }
 
-    public ViewHolder setImageResource(int viewId, int resId)
-    {
+    public ViewHolder setImageResource(int viewId, int resId) {
         ImageView view = getView(viewId);
         view.setImageResource(resId);
         return this;
     }
 
     public ViewHolder setOnClickListener(int viewId,
-                                         View.OnClickListener listener)
-    {
+                                         View.OnClickListener listener) {
         View view = getView(viewId);
         view.setOnClickListener(listener);
         return this;
