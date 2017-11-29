@@ -16,7 +16,6 @@ import com.flyco.tablayout.listener.OnTabSelectListener;
 import java.util.ArrayList;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
@@ -83,10 +82,4 @@ public class MainActivity extends BaseActivity {
         mTl2.setTabData(mTabEntities2);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 }
