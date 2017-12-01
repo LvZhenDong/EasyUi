@@ -124,6 +124,10 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         mBtnLeft.setOnClickListener(listener);
     }
 
+    public void disableLeftBtn(){
+        mBtnLeft.setVisibility(View.GONE);
+    }
+
     private QMUITopBar createTopBar() {
         QMUITopBar topBar = (QMUITopBar) findViewById(returnTopBarId());
         mTvTitle = topBar.setTitle("title");    //必须设置个非null的值，不然title不可见
